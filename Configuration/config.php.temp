@@ -1,0 +1,10 @@
+<?php
+
+
+$connectionParams = array(
+    'dbname' => '-Database Name-',
+    'user' => '-User-',
+    'password' => '-Password-',
+    'host' => '-Host IP-',
+    'driver' => '-Database Type-',
+);

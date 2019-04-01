@@ -16,7 +16,7 @@ class Result
      * @Column(type="string")
      * @var string
      */
-    protected $player1;
+    protected $player;
 
     /**
      * @Column(type="string")
@@ -44,22 +44,22 @@ class Result
 
     public function getPlayer1()
     {
-        return $this->player1;
+        return $this->player;
     }
 
     public function setPlayer1($name)
     {
-        $this->player1 = $name;
+        $this->player = $name;
     }
 
     public function getCPU()
     {
-        return $this->player2;
+        return $this->cpu;
     }
 
     public function setCPU($name)
     {
-        $this->player2 = $name;
+        $this->cpu = $name;
     }
 
     public function getWinner()
