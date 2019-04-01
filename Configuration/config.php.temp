@@ -1,5 +1,8 @@
 <?php
 
+/**
+* Fill in the correct data and change the filename to config.php
+*/
 
 $connectionParams = array(
     'dbname' => '-Database Name-',
