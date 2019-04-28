@@ -4,10 +4,15 @@
 * Fill in the correct data and change the filename to config.php
 */
 
-$connectionParams = array(
-    'dbname' => '-Database Name-',
-    'user' => '-User-',
-    'password' => '-Password-',
-    'host' => '-Host IP-',
-    'driver' => '-Database Type-',
-);
+class config{
+    public static function getConnParams(){
+        return array(
+            'dbname' => '',
+            'user' => '',
+            'password' => '',
+            'host' => '',
+            'driver' => '',
+        );
+
+    }
+}

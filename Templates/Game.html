@@ -8,6 +8,24 @@
         img{width: 75%}
         .row{display: flex; flex-direction: row; flex-wrap: nowrap; padding-top: 10% }
     </style>
+    <script>
+
+        function play (pick){
+
+            fetch('http://localhost/rock_paper_scissors/Classes/Controller.php?choice=' + pick, {})
+                .then(response => response.json())
+                .then(response => {
+                    console.log(response);
+                    document.getElementById("erg").innerHTML = response;
+                })
+
+        }
+
+
+
+
+
+    </script>
 </head>
 <body>
 <h1>Choose your pick</h1>
@@ -32,22 +50,13 @@
             </div>
 
     </div>
+    <div>
 
-<script>
-    function play (pick){
+        <p>the winner is <span id="erg"></span></p>
 
-        console.log(pick);
-        fetch('http://localhost/rock_paper_scissors/Classes/Controller.php?choice=' + pick, {})
-            .then(response => response.json())
-            .then(response => {
-            console.log(response);
-    })
-
-    }
+    </div>
 
 
-
-</script>
 
 </body>
 </html>

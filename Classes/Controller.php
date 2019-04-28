@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bigni
- * Date: 01.04.2019
- * Time: 12:00
- */
 
 
 
@@ -15,15 +9,18 @@ if(isset($_GET['choice'])){
 else{
     $pick = 1;
 }
+$cpuChoice = rand(1,3);
 
+require_once "Round.php";
+(new Round())->saveStats($cpuChoice,$pick);
 
 header('content-type: application/json');
-echo json_encode(getWinner($pick));
+echo json_encode(getWinner($pick,$cpuChoice));
 
-function  getWinner ($pick){
+function  getWinner ($pick,$cpuChoice){
 
 
-    $cpuChoice = rand(1,3);
+
 
     $winner = "";
 

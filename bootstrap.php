@@ -16,4 +16,4 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 require "Configuration/config.php";
 
 // obtaining the entity manager
-$entityManager = EntityManager::create($conn, $config);
+$entityManager = EntityManager::create(config::getConnParams(), $config);

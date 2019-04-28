@@ -24,15 +24,11 @@ class Result
      */
     protected $cpu;
 
-    /**
-     * @Column(type="string")
-     * @var string
-     */
-    protected $winner;
+
 
     /**
-     * @Column(type="date")
-     * @var date
+     * @Column(type="datetime")
+     * @var \DateTime
      */
     protected $date;
 
@@ -62,15 +58,6 @@ class Result
         $this->cpu = $name;
     }
 
-    public function getWinner()
-    {
-        return $this->winner;
-    }
-
-    public function setWinner($name)
-    {
-        $this->winner = $name;
-    }
 
     public function getDate()
     {
