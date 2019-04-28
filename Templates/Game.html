@@ -12,30 +12,42 @@
 <body>
 <h1>Choose your pick</h1>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 
 <div class="container">
 
     <div class="row">
 
                 <div>
-                    <img src="Pictures/rock.png"  class="rounded img-fluid" >
+                    <img src="Pictures/rock.png"  class="rounded img-fluid" onclick="play(1)">
                     <p>ROCK</p>
                 </div>
                 <div>
-                    <img src="Pictures/paper.png"  class="rounded img-fluid" >
+                    <img src="Pictures/paper.png"  class="rounded img-fluid" onclick="play(2)">
                     <p>PAPER</p>
                 </div>
                 <div>
-                    <img src="Pictures/scissors.png"  class="rounded img-fluid" >
+                    <img src="Pictures/scissors.png"  class="rounded img-fluid" onclick="play(3)">
                     <p>SCISSORS</p>
                 </div>
             </div>
 
     </div>
+
+<script>
+    function play (pick){
+
+        console.log(pick);
+        fetch('http://localhost/rock_paper_scissors/Classes/Controller.php?choice=' + pick, {})
+            .then(response => response.json())
+            .then(response => {
+            console.log(response);
+    })
+
+    }
+
+
+
+</script>
 
 </body>
 </html>
