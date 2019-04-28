@@ -5,27 +5,9 @@
     <title>Rock_Paper_Scissors</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
-        img{width: 75%}
-        .row{display: flex; flex-direction: row; flex-wrap: nowrap; padding-top: 10% }
+        img{width:75%}.row{display:flex;flex-direction:row;flex-wrap:nowrap;padding-top:10%}
     </style>
-    <script>
-
-        function play (pick){
-
-            fetch('http://localhost/rock_paper_scissors/Classes/Controller.php?choice=' + pick, {})
-                .then(response => response.json())
-                .then(response => {
-                    console.log(response);
-                    document.getElementById("erg").innerHTML = response;
-                })
-
-        }
-
-
-
-
-
-    </script>
+    <script src="Templates/Main_min.js"></script>
 </head>
 <body>
 <h1>Choose your pick</h1>

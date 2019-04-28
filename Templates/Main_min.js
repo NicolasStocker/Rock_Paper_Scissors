@@ -1,0 +1,1 @@
+function play(e){fetch("http://localhost/rock_paper_scissors/Classes/Controller.php?choice="+e,{}).then(e=>e.json()).then(e=>{console.log(e),document.getElementById("erg").innerHTML=e})}
