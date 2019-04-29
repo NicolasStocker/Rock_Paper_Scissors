@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nicolas Stocker
- * Date: 18.03.2019
- * Time: 13:02
- */
 
 namespace HTL3R\RPS;
 

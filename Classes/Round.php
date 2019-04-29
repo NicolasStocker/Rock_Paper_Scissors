@@ -11,8 +11,6 @@ class Round{
         $isDevMode = true;
         $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode);
 
-
-
         $this->entityManager = EntityManager::create(config::getConnParams(), $config);
     }
 
